@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Card } from "react-bootstrap";
+import CardHeader from "./components/CardHeader";
+import CardBody from "./components/CardBody";
+import CardFooter from "./components/CardFooter";
+import PaginationComponent from "./components/PaginationComponent";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.sass";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <div className="main-wrapper">
+        <Card>
+          <CardHeader />
+          <CardBody />
+          <CardFooter />
+        </Card>
+
+        <PaginationComponent />
+      </div>
     </div>
   );
 }
